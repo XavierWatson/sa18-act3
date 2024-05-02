@@ -1,0 +1,16 @@
+<h1>Products</h1>
+<table style="background-color: bisque;">
+    <thead>
+        <tr>
+            <td>Product</td>
+            <td></td>
+        </tr>
+    </thead>
+    {% for product in products %}
+    <tbody>
+        <tr>
+            <td>{{ product.name }}</td>
+            <td><a href="{% url 'show_product' product.id %}">Show</a></td>
+        </tr>
+    </tbody>
+    {% endfor%}
